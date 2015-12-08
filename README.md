@@ -6,7 +6,7 @@ Quickly build out `.md` files inside _posts for your Jekyll blogs.
 I wrote this tool because I found it to be too time consuming to keep a blank `.md` template somwhere, open it, then 
 save it in the proper location. With this tool, all a user needs to do is answer the prompts and they're good to go.
 
-## Reqirements
+## Requirements
 
 This app requires Ruby and Atom. The text editor of choice can be changed. 
 
