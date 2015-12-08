@@ -17,7 +17,6 @@ directly to it.
 
 ## TODO
 
-- use system date if none given.
 - skip Atom if not available.
 - multiple tags in template
 - redirect url in template
