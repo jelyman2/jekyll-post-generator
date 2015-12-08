@@ -3,7 +3,7 @@ Quickly build out `.md` files inside _posts for your Jekyll blogs.
 
 ## Introduction
 
-I wrote this tool because I found it to be too time consuming to keep a blank `.md` template somwhere, open it, then 
+I wrote this tool because I found it to be too time consuming to keep a blank `.md` template somewhere, open it, then 
 save it in the proper location. With this tool, all a user needs to do is answer the prompts and they're good to go.
 
 ## Requirements
