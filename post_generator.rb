@@ -3,10 +3,11 @@
 puts 'Enter the post title:'
 title = gets.chomp
 
-puts 'Enter the date (YYYY-MM-DD):'
+puts 'Enter the date (YYYY-MM-DD) or leave blank for current:'
 date = gets.chomp
 
-# TODO: Leave date blank to use system date.
+date = Time.now.strftime('%Y-%m-%d') unless date != nil
+time = Time.now.strftime('%H:%M')
 
 puts 'Enter the category:'
 category = gets.chomp
@@ -29,6 +30,7 @@ the_post_file.puts('---')
 the_post_file.puts("title: \"#{title}\"")
 the_post_file.puts('author: Johnathan Lyman')
 the_post_file.puts('layout: post')
+the_post_file.puts("date: #{date} #{time}")
 the_post_file.puts("permalink: #{the_post_permalink}")
 the_post_file.puts('categories:')
 the_post_file.puts("    - #{category}")
