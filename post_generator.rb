@@ -2,11 +2,13 @@
 
 puts 'Enter the post title:'
 title = gets.chomp
+title.titleize
+title.gsub!(/\W+/, '')
 
 puts 'Enter the date (YYYY-MM-DD) or leave blank for current:'
 date = gets.chomp
 
-date = Time.now.strftime('%Y-%m-%d') unless date != nil
+date = Time.now.strftime('%Y-%m-%d') unless date != ""
 time = Time.now.strftime('%H:%M')
 
 puts 'Enter the category:'
