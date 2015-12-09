@@ -16,6 +16,13 @@ time = Time.now.strftime('%H:%M')
 puts 'Enter the category:'
 category = gets.chomp
 
+puts 'Is this a link post? (y/N)'
+is_link = gets.chomp
+
+if is_link == 'y'
+  post_has_link = true
+end
+
 sanitized_title = title.downcase.gsub(/[^a-z0-9\s]/i, '')
 
 dirty_slug = sanitized_title.split(' ')
@@ -46,6 +53,9 @@ the_post_file.puts("date: #{hyphen_date} #{time}")
 the_post_file.puts("permalink: #{the_post_permalink}")
 the_post_file.puts('categories:')
 the_post_file.puts("    - #{category}")
+if post_has_link
+  the_post_file.puts('link: ')
+end
 the_post_file.puts('---')
 the_post_file.puts('')
 the_post_file.close
