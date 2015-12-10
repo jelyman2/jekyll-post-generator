@@ -19,6 +19,8 @@ category = gets.chomp
 puts 'Is this a link post? (y/N)'
 is_link = gets.chomp
 
+post_has_link = false
+
 if is_link == 'y'
   post_has_link = true
 end
@@ -53,9 +55,7 @@ the_post_file.puts("date: #{hyphen_date} #{time}")
 the_post_file.puts("permalink: #{the_post_permalink}")
 the_post_file.puts('categories:')
 the_post_file.puts("    - #{category}")
-if post_has_link
-  the_post_file.puts('link: ')
-end
+the_post_file.puts('link: ') if post_has_link
 the_post_file.puts('---')
 the_post_file.puts('')
 the_post_file.close
